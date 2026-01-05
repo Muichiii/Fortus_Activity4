@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="overlay">
+    <div class="text-center">
+        <h1 class="display-4 fw-bold">Game Vault</h1>
+        <p>Add, view, edit, and delete you game collection in one organized place.</p>
+        <a asp-controller="Games" asp-action="List" class="btn btn-secondary btn-lg px-5">Start</a>
+    </div>
+</div>
+
+<style>
+    body {
+        background: url('/images/Try.gif') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        height: 100%;
+    }
+
+    .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 70vh;
+        overflow: hidden;
+    }
+</style>

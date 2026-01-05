@@ -1,0 +1,37 @@
+
+body {
+    background: url('/images/Try.gif') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+    margin-bottom: 60px;
+}
+
+.content-container {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 2rem;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+    .table thead {
+        background-color: #343a40;
+        color: white;
+    }

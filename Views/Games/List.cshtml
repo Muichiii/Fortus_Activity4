@@ -1,0 +1,40 @@
+﻿@model List<Fortus_Activity4.Models.Entities.Game>
+
+@{
+    ViewData["Title"] = "Game List";
+}
+
+<div class="content-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>List of Games</h1>
+        <a class="btn btn-success shadow-sm" asp-controller="Games" asp-action="Add">
+            <i class="bi bi-plus-circle"></i> Add New Game
+        </a>
+    </div>
+
+    <table class="table table-hover table-striped shadow-sm">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Device</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model)
+            {
+                <tr>
+                    <td>@game.Id</td>
+                    <td class="fw-bold">@game.Title</td>
+                    <td><span class="badge bg-secondary">@game.Genre</span></td>
+                    <td>@game.Device</td>
+                    <td class="text-center">
+                        <a class="btn btn-sm btn-outline-primary" asp-controller="Games" asp-action="Edit" asp-route-id="@game.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
